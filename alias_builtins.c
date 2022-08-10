@@ -1,6 +1,6 @@
 /*
  * File: alias_builtins.c
- * Auth: Inyang Ukpong & Daniel Igwe
+ * Auth: Inyang Ukpong & Sebastian Chishiri
  */
 #include "shell.h"
 
