@@ -3,8 +3,8 @@
 
 /*
  * File: shell.h
- * Authors: Adeyemi Anifowose
- *          Apo Olugbenga
+ * Authors: Inyang Ukpong
+ *          Sebastian Chishiri
  */
 
 #include <fcntl.h>
@@ -34,8 +34,8 @@ int hist;
  */
 typedef struct list_s
 {
-    char *dir;
-    struct list_s *next;
+	char *dir;
+	struct list_s *next;
 } list_t;
 
 /**
@@ -45,8 +45,8 @@ typedef struct list_s
  */
 typedef struct builtin_s
 {
-    char *name;
-    int (*f)(char **argv, char **front);
+	char *name;
+	int (*f)(char **argv, char **front);
 } builtin_t;
 
 /**
@@ -57,9 +57,9 @@ typedef struct builtin_s
  */
 typedef struct alias_s
 {
-    char *name;
-    char *value;
-    struct alias_s *next;
+	char *name;
+	char *value;
+	struct alias_s *next;
 } alias_t;
 
 /* Global aliases linked list */
@@ -99,12 +99,12 @@ int _strncmp(const char *s1, const char *s2, size_t n);
 /* Builtins */
 int (*get_builtin(char *command))(char **args, char **front);
 int shellby_exit(char **args, char **front);
-int shellby_env(char **args, char __attribute__((__unused__)) * *front);
-int shellby_setenv(char **args, char __attribute__((__unused__)) * *front);
-int shellby_unsetenv(char **args, char __attribute__((__unused__)) * *front);
-int shellby_cd(char **args, char __attribute__((__unused__)) * *front);
-int shellby_alias(char **args, char __attribute__((__unused__)) * *front);
-int shellby_help(char **args, char __attribute__((__unused__)) * *front);
+int shellby_env(char **args, char __attribute__((__unused__)) **front);
+int shellby_setenv(char **args, char __attribute__((__unused__)) **front);
+int shellby_unsetenv(char **args, char __attribute__((__unused__)) **front);
+int shellby_cd(char **args, char __attribute__((__unused__)) **front);
+int shellby_alias(char **args, char __attribute__((__unused__)) **front);
+int shellby_help(char **args, char __attribute__((__unused__)) **front);
 
 /* Builtin Helpers */
 char **_copyenv(void);
