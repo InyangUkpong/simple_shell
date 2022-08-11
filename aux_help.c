@@ -29,7 +29,7 @@ void aux_help_setenv(void)
 	write(STDOUT_FILENO, help, _strlen(help));
 }
 /**
- * aux_help_unsetenv - Help information for the builtin unsetenv
+ * aux_help_unsetenv - Help informations for the builtin unsetenv
  * Return: no return
  */
 void aux_help_unsetenv(void)
